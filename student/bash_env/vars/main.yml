@@ -1,0 +1,7 @@
+---
+# vars file for bash_env
+directory : /etc/skel
+templates: 
+   - .bash_profile.j2
+   - .bashrc.j2
+   - .vimrc.j2
