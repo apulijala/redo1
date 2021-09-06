@@ -1,0 +1,14 @@
+---
+# tasks file for bash_env
+- name: Create the bash profile correctly
+  debug: 
+    msg: "{{ item.name }} and {{ item.dest }}"
+  loop: "{{ templates }}"
+
+
+- name: Install the template at the correct location. 
+  template: 
+    src: "{{ item.name }}"
+    dest: "{{ directory }}/{{item.dest }}"
+  loop: "{{ templates }}"
+

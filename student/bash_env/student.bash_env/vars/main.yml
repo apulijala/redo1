@@ -1,0 +1,12 @@
+---
+# vars file for bash_env
+directory : /etc/skel
+templates: 
+   - name: ".bash_profile.j2"
+     dest: ".bash_profile"
+
+   - name: ".bashrc.j2"
+     dest: ".bashrc"
+
+   - name: ".vimrc.j2"
+     dest: ".vimrc"

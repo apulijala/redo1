@@ -1,0 +1,10 @@
+---
+# tasks file for bash_env
+- name: Create the bash profile correctly
+  template:
+    src: "{{ path }}"
+    dest: "{{ directory }}"
+    owner: root
+    group: root
+    mode: '0644'
+  loop: "{{ templates }}"
